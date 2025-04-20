@@ -14,4 +14,8 @@ class Car(
             this.distance += randomValue
         }
     }
+
+    fun getNameAndDistance(): String {
+        return "$name : $distance"
+    }
 }

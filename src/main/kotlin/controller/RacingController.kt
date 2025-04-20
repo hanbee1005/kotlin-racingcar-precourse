@@ -9,8 +9,15 @@ class RacingController {
         return carNames.map { Car(it) }
     }
 
-    fun startRace(times: Int): RacingResultView {
-        return RacingResultView()
+    fun startRace(cars: List<Car>, times: Int): RacingResultView {
+        val result = RacingResultView()
+
+        repeat(times) {
+            cars.forEach { it.move() }
+            result.recordResult(cars)
+        }
+
+        return result
     }
 
     fun getWinners(): WinnerView {

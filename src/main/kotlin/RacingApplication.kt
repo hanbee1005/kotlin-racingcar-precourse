@@ -36,9 +36,12 @@ fun main() {
     }
 
     // 4. 컨트롤러 경주 호출
-    racingController.startRace(times)
+    val racingResultView = racingController.startRace(cars, times)
 
     // 5. 결과 출력
+    println()
+    println("실행 결과")
+    racingResultView.printAllResults()
 
     // 6. 우승자 조회 호출
     racingController.getWinners()
