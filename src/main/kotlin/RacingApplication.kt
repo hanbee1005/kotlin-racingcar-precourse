@@ -44,7 +44,8 @@ fun main() {
     racingResultView.printAllResults()
 
     // 6. 우승자 조회 호출
-    racingController.getWinners()
+    val winnerView = racingController.getWinners(cars)
 
     // 7. 우승자 출력
+    winnerView.printWinners()
 }

@@ -20,7 +20,9 @@ class RacingController {
         return result
     }
 
-    fun getWinners(): WinnerView {
-        return WinnerView()
+    fun getWinners(cars: List<Car>): WinnerView {
+        val maxDistance = cars.maxOfOrNull { it.distance }
+        val winners = cars.filter { it.distance == maxDistance }
+        return WinnerView(winners.map { it.name })
     }
 }
