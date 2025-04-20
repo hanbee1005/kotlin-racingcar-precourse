@@ -38,7 +38,7 @@ fun main() {
     // 4. 컨트롤러 경주 호출
     val racingResultView = racingController.startRace(cars, times)
 
-    // 5. 결과 출력
+    // 5. 경주 결과 출력
     println()
     println("실행 결과")
     racingResultView.printAllResults()
